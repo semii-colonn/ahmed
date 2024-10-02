@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain X - Professional Trader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div class="logo">
+                <img src="../imgs/Captain X 2022 copy.png" alt="Captain X Logo">
+            </div>
+            <div class="navigation">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Broker</a>
+                <a class="nav-link" href="#"><i class="fas fa-comments"></i> Complaints</a>
+                <a class="nav-link" href="#"><i class="fas fa-globe"></i> Language</a>
+                
+            </div>
+            <button class="auth-popup-btn" id="authBtn"><i class="fas fa-user"></i> Register/Login</button>
+        </nav>
+
+        <main>
+            <div class="main-content fade-in">
+                <h1>Hi, I'm Captain X</h1>
+                <h2>A Professional Trader In The Financial Market</h2>
+                <p>Discoverer Of The Golden Ratto Equations In The Financial Market And YouTuber Specializes In Detecting Fraudulent Trading Companies THANKS TO ALLAH</p>
+                <button class="cta-button"><i class="fas fa-rocket"></i> Register Now</button>
+            </div>
+            <div class="main-image slide-in">
+            </div>
+        </main>
+
+        <section class="subscription-section">
+            <div class="subscription-header fade-in">
+                <h2>Choose Your Trading Journey</h2>
+                <p>Select the plan that best fits your trading goals and experience level. Unlock the power of professional trading with Captain X.</p>
+            </div>
+            <div class="subscription-cards">
+                <div class="subscription-card slide-in">
+                    <h3>Basic Plan</h3>
+                    <div class="price">$9.99/mo</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Access to basic trading tools</li>
+                        <li><i class="fas fa-check"></i> Weekly market analysis</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li><i class="fas fa-check"></i> Trading community access</li>
+                        <li><i class="fas fa-check"></i> Monthly webinar</li>
+                    </ul>
+                    <button class="subscribe-btn">Get Started</button>
+                </div>
+                <div class="subscription-card slide-in">
+                    <h3>Pro Plan</h3>
+                    <div class="price">$19.99/mo</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Advanced trading tools</li>
+                        <li><i class="fas fa-check"></i> Daily market analysis</li>
+                        <li><i class="fas fa-check"></i> Priority email support</li>
+                        <li><i class="fas fa-check"></i> Exclusive trading community access</li>
+                        <li><i class="fas fa-check"></i> Weekly webinar</li>
+                        <li><i class="fas fa-check"></i> One-on-one monthly consultation</li>
+                    </ul>
+                    <button class="subscribe-btn">Upgrade to Pro</button>
+                </div>
+                <div class="subscription-card slide-in">
+                    <h3>Elite Plan</h3>
+                    <div class="price">$39.99/mo</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Full suite of trading tools</li>
+                        <li><i class="fas fa-check"></i> Real-time market analysis</li>
+                        <li><i class="fas fa-check"></i> 24/7 phone support</li>
+                        <li><i class="fas fa-check"></i> VIP trading community access</li>
+                        <li><i class="fas fa-check"></i> Daily live coaching sessions</li>
+                        <li><i class="fas fa-check"></i> Weekly one-on-one consultation</li>
+                        <li><i class="fas fa-check"></i> Access to Golden Ratto Equations</li>
+                    </ul>
+                    <button class="subscribe-btn">Go Elite</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Captain X. All rights reserved.</p>
+            <p>Empowering traders with knowledge and tools to navigate the financial markets successfully.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <span class="close" id="closePopup">&times;</span>
+            <h3>Login / Register</h3>
+            <form id="authForm">
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authBtn = document.getElementById('authBtn');
+            const popupOverlay = document.getElementById('popupOverlay');
+            const closePopup = document.getElementById('closePopup');
+            const authForm = document.getElementById('authForm');
+
+            authBtn.addEventListener('click', function() {
+                popupOverlay.style.display = 'block';
+            });
+
+            closePopup.addEventListener('click', function() {
+                popupOverlay.style.display = 'none';
+            });
+
+            popupOverlay.addEventListener('click', function(event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay.style.display = 'none';
+                }
+            });
+
+            authForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                alert('Form submitted! In a real application, this would connect to a backend.');
+                popupOverlay.style.display = 'none';
+            });
+
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.fade-in, .slide-in');
+                const windowHeight = window.innerHeight;
+
+                elements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>

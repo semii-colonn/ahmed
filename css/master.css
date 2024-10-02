@@ -65,7 +65,7 @@ header {
 .navigation .btnlogin-popup {
     width: 120px;
     height: 45px;
-    background: linear-gradient(90deg, #ff6600c3, #ffcc00c1, #ff0000c4);
+    background: linear-gradient(90deg, #ff6600c3, #ff0000c4);
     border-radius: 8px;
     cursor: pointer;
     font-size: 1em;
@@ -280,7 +280,7 @@ header {
 }
 
 .hix {
-    background: linear-gradient(90deg, #ff6600, #ffcc00, #ff0000);
+    background: linear-gradient(90deg, #ff6600, #ffcc00);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -323,10 +323,10 @@ header {
     align-items: center;
     width: 120px;
     height: 45px;
-    background: linear-gradient(90deg, #ff6600c3, #ffcc00c1, #ff0000c4);
+    background: linear-gradient(90deg, #ff6600c3, #ff0000c4);
     /* تدرج الخلفية */
     border-radius: 8px;
-    border: navy;
+    border: none;
     cursor: pointer;
     font-size: 1em;
     color: #fff;
@@ -340,6 +340,12 @@ header {
     opacity: 0;
     animation: fadeIn 2s forwards;
     transition: opacity 0.5s;
+}
+
+button, a {
+    border: none !important;
+    outline: none !important;
+    cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -442,7 +448,7 @@ header {
     grid-template-columns: 1fr;
     align-content: center;
     padding: 2rem 0 3rem;
-    background-color: #686D76;
+    background: linear-gradient(135deg, #ffae00, #000000);
     background-size: cover;
     background-position: center;
 
