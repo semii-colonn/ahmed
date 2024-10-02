@@ -15,7 +15,7 @@ body {
 
 #container {
     min-height: 200vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1920/1080') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 nav {
@@ -85,7 +85,7 @@ main {
     justify-content: space-between;
     height: 100vh;
     padding: 2rem 10%;
-    background-image: url("../imgs/Final.png");
+    background-image: url("../imgs/final-compressed.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
